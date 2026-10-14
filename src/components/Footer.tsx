@@ -11,7 +11,7 @@ export default function Footer() {
           Crafted with <Heart size={14} className="text-pink-500 fill-pink-500" /> using React & Framer Motion
         </p>
         <a
-          href="https://github.com"
+          href="https://github.com/Riyazkhan53"
           target="_blank"
           rel="noopener noreferrer"
           className="text-slate-500 hover:text-white transition-colors"

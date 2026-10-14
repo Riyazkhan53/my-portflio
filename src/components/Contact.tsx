@@ -4,9 +4,9 @@ import { useInView } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, CheckCircle, Github, Linkedin, Twitter } from 'lucide-react';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'riyazkhan@example.com', href: 'mailto:riyazkhan@example.com' },
-  { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
-  { icon: MapPin, label: 'Location', value: 'Mumbai, India', href: '#' },
+  { icon: Mail, label: 'Email', value: 'riyaz.r1410@gmail.com', href: 'mailto:riyaz.r1410@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '8778327724', href: 'tel:+918778327724' },
+  { icon: MapPin, label: 'Location', value: 'Bangalore, India', href: '#' },
 ];
 
 const socials = [

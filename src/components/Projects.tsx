@@ -5,56 +5,28 @@ import { ExternalLink, Github, Star } from 'lucide-react';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    desc: 'A full-stack e-commerce solution with real-time inventory management, payment gateway integration, and admin dashboard.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
-    gradient: 'from-indigo-600 to-blue-600',
-    stars: 128,
+    title: 'Rahul Catering Service',
+    desc: 'A full-stack catering management platform with a React web app and cross-platform mobile app. Handles end-to-end workflow from quotation creation, product list management, billing, and invoice generation. The website connects to the app for chat and request-order quotations.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Capacitor', 'Electron', 'Express'],
+    gradient: 'from-indigo-600 to-purple-600',
+    stars: 1,
     featured: true,
+    github: 'https://github.com/Riyazkhan53/rahul-catering-app',
+    demo: 'https://app.rahulcateringevents.com/',
   },
   {
-    title: 'AI Chat Application',
-    desc: 'Real-time chat app powered by OpenAI GPT-4 with semantic search, conversation history, and multi-model support.',
-    tags: ['Next.js', 'OpenAI', 'WebSocket', 'MongoDB', 'TailwindCSS'],
+    title: 'Rahul Catering Website',
+    desc: 'The customer-facing website for Rahul Catering Service with integrated chat and request-order quotation flow that connects directly to the catering app backend.',
+    tags: ['React', 'Vite', 'TailwindCSS', 'Node.js'],
     gradient: 'from-purple-600 to-pink-600',
-    stars: 94,
+    stars: 0,
     featured: true,
-  },
-  {
-    title: 'Task Management SaaS',
-    desc: 'Collaborative project management tool with kanban boards, time tracking, team analytics, and Slack integration.',
-    tags: ['React', 'TypeScript', 'GraphQL', 'AWS', 'Docker'],
-    gradient: 'from-emerald-600 to-teal-600',
-    stars: 76,
-    featured: true,
-  },
-  {
-    title: 'Crypto Dashboard',
-    desc: 'Real-time cryptocurrency dashboard with live price charts, portfolio tracking, and market analysis.',
-    tags: ['React', 'WebSocket', 'Chart.js', 'Binance API'],
-    gradient: 'from-orange-600 to-red-600',
-    stars: 52,
-    featured: false,
-  },
-  {
-    title: 'Social Media Analytics',
-    desc: 'Analytics platform for social media metrics, audience insights, and automated report generation.',
-    tags: ['Python', 'FastAPI', 'React', 'PostgreSQL'],
-    gradient: 'from-cyan-600 to-blue-600',
-    stars: 43,
-    featured: false,
-  },
-  {
-    title: 'Food Delivery App',
-    desc: 'Full-stack food delivery platform with real-time order tracking, driver management, and payment processing.',
-    tags: ['React Native', 'Node.js', 'MongoDB', 'Socket.io'],
-    gradient: 'from-pink-600 to-rose-600',
-    stars: 67,
-    featured: false,
+    github: 'https://github.com/Riyazkhan53/rahul-catering-website',
+    demo: 'https://www.rahulcateringevents.com/',
   },
 ];
 
-const filters = ['All', 'Featured', 'React', 'Node.js', 'Python'];
+const filters = ['All', 'Featured', 'React', 'Node.js'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -137,14 +109,18 @@ export default function Projects() {
                 </div>
                 <div className="flex gap-3">
                   <motion.a
-                    href="#"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
                     whileHover={{ x: 2 }}
                   >
                     <Github size={16} /> Code
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
                     whileHover={{ x: 2 }}
                   >
@@ -163,7 +139,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/Riyazkhan53"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 transition-colors text-sm font-medium"

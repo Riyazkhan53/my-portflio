@@ -4,10 +4,10 @@ import { useRef } from 'react';
 import { Code2, Palette, Zap, Users } from 'lucide-react';
 
 const stats = [
-  { value: '3+', label: 'Years Experience' },
-  { value: '50+', label: 'Projects Completed' },
-  { value: '20+', label: 'Happy Clients' },
-  { value: '99%', label: 'Client Satisfaction' },
+  { value: '5+', label: 'Years Experience' },
+  { value: '1', label: 'Live Product' },
+  { value: '2', label: 'GitHub Repos' },
+  { value: '100%', label: 'Commitment' },
 ];
 
 const highlights = [
@@ -44,15 +44,16 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              I'm a <span className="text-white font-semibold">passionate Full Stack Developer</span> with over 3 years of experience
-              building modern web applications. I specialize in React, TypeScript, and Node.js.
+              I'm a <span className="text-white font-semibold">working professional Full Stack Developer</span> with over 5 years of experience
+              building real-world web and mobile applications. I specialize in React, Node.js, MongoDB, and cross-platform app development.
             </p>
             <p className="text-slate-400 leading-relaxed mb-8">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open source,
-              or designing clean UI concepts. I believe great software is both technically sound and beautifully crafted.
+              I build products that solve real business problems — like turning manual catering workflows into a fully
+              digital platform with quotations, billing, invoices, and website-to-app communication. I believe great software
+              is both technically sound and beautifully crafted.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['React', 'TypeScript', 'Node.js', 'Python', 'Figma', 'AWS'].map((tech) => (
+              {['React', 'Node.js', 'MongoDB', 'Capacitor', 'Electron', 'TailwindCSS'].map((tech) => (
                 <span key={tech} className="px-4 py-1.5 text-sm rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 font-medium">
                   {tech}
                 </span>

@@ -26,7 +26,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            Available for work
+            Working Professional
           </motion.div>
 
           <motion.h1
@@ -56,8 +56,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg"
           >
-            I craft beautiful, performant web experiences with modern technologies.
-            Passionate about clean code, pixel-perfect UI, and delivering exceptional user experiences.
+            I'm a working professional Full Stack Developer with 5+ years of experience
+            building real-world web and mobile applications. I specialize in React, Node.js,
+            and turning manual business workflows into scalable digital products.
           </motion.p>
 
           <motion.div
@@ -121,12 +122,12 @@ export default function Hero() {
               </div>
             </div>
             <div className="absolute -top-4 -right-4 w-20 h-20 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex flex-col items-center justify-center">
-              <span className="text-xl font-black text-white">3+</span>
+              <span className="text-xl font-black text-white">5+</span>
               <span className="text-[10px] text-slate-400 text-center leading-tight">Years Exp</span>
             </div>
             <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex flex-col items-center justify-center">
-              <span className="text-xl font-black text-white">50+</span>
-              <span className="text-[10px] text-slate-400 text-center leading-tight">Projects</span>
+              <span className="text-xl font-black text-white">1+</span>
+              <span className="text-[10px] text-slate-400 text-center leading-tight">Live Product</span>
             </div>
           </div>
         </motion.div>

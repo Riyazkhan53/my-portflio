@@ -7,9 +7,9 @@ const skillGroups = [
     category: 'Frontend',
     color: 'from-indigo-500 to-blue-500',
     skills: [
-      { name: 'React / Next.js', level: 95 },
-      { name: 'TypeScript', level: 90 },
+      { name: 'React / Vite', level: 95 },
       { name: 'Tailwind CSS', level: 92 },
+      { name: 'Capacitor / Mobile', level: 85 },
       { name: 'Framer Motion', level: 80 },
     ],
   },
@@ -17,27 +17,27 @@ const skillGroups = [
     category: 'Backend',
     color: 'from-purple-500 to-pink-500',
     skills: [
-      { name: 'Node.js / Express', level: 88 },
-      { name: 'Python / Django', level: 78 },
-      { name: 'REST APIs', level: 92 },
-      { name: 'GraphQL', level: 72 },
+      { name: 'Node.js / Express', level: 90 },
+      { name: 'MongoDB / Mongoose', level: 88 },
+      { name: 'REST APIs / JWT', level: 90 },
+      { name: 'OpenAI Integration', level: 75 },
     ],
   },
   {
-    category: 'Tools & Cloud',
+    category: 'Tools & Platforms',
     color: 'from-emerald-500 to-teal-500',
     skills: [
-      { name: 'PostgreSQL / MongoDB', level: 85 },
-      { name: 'Docker / Kubernetes', level: 70 },
-      { name: 'AWS / Vercel', level: 80 },
-      { name: 'Git / CI-CD', level: 90 },
+      { name: 'PDF Generation', level: 90 },
+      { name: 'Electron / Desktop', level: 75 },
+      { name: 'Git / GitHub', level: 88 },
+      { name: 'PWA / Deployment', level: 80 },
     ],
   },
 ];
 
 const techIcons = [
-  'React', 'TypeScript', 'Next.js', 'Node.js', 'Python',
-  'PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Figma', 'Git', 'GraphQL'
+  'React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'Capacitor',
+  'Electron', 'TailwindCSS', 'OpenAI', 'PDF Generation', 'JWT', 'Git'
 ];
 
 function SkillBar({ name, level, color, delay }: { name: string; level: number; color: string; delay: number }) {
