@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Riyazkhan N — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0f172a;
+    --body: #334155;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --accent: #4f46e5;
+    --accent2: #9333ea;
+    --teal: #0d9488;
+    --soft: #eef2ff;
+  }
+  html, body { width: 210mm; background: #fff; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--body); font-size: 8.5pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; display: flex; flex-direction: column; }
+
+  /* Header */
+  header { background: linear-gradient(120deg, #1e1b4b 0%, #312e81 45%, #581c87 100%); color: #fff; padding: 7mm 12mm 5.5mm; position: relative; overflow: hidden; }
+  header::after { content: ""; position: absolute; right: -30mm; top: -30mm; width: 90mm; height: 90mm; border-radius: 50%; background: radial-gradient(circle, rgba(167,139,250,.35), transparent 70%); }
+  .head-row { display: flex; align-items: center; gap: 7mm; position: relative; z-index: 1; }
+  .avatar { width: 21mm; height: 21mm; border-radius: 50%; background: linear-gradient(135deg, #818cf8, #c084fc); display: grid; place-items: center; font-size: 22pt; font-weight: 800; letter-spacing: -1px; border: 2.5px solid rgba(255,255,255,.55); flex: none; }
+  h1 { font-size: 23pt; font-weight: 800; letter-spacing: -.5px; line-height: 1.1; }
+  .title { font-size: 11.5pt; font-weight: 600; color: #c7d2fe; margin-top: 1.5mm; }
+  .tagline { font-size: 9.2pt; color: #e0e7ff; margin-top: 2mm; max-width: 150mm; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 2mm 5mm; margin-top: 4mm; position: relative; z-index: 1; font-size: 8.6pt; }
+  .contacts a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 1.6mm; }
+  .contacts svg { width: 3.6mm; height: 3.6mm; stroke: #c4b5fd; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Body */
+  main { display: grid; grid-template-columns: 1fr 72mm; flex: 1; }
+  .left { padding: 5.5mm 6mm 4mm 12mm; }
+  .right { padding: 5.5mm 10mm 4mm 6mm; background: #f8fafc; border-left: 1px solid var(--line); }
+  section { margin-bottom: 3.4mm; }
+  h2 { font-size: 10pt; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 2.5mm; margin-bottom: 2.2mm; }
+  h2::after { content: ""; flex: 1; height: 1.5px; background: linear-gradient(90deg, #c7d2fe, transparent); }
+
+  .summary { color: var(--body); }
+  .summary b { color: var(--ink); }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+  .job-title { font-size: 11pt; font-weight: 700; color: var(--ink); }
+  .pill { font-size: 7.8pt; font-weight: 600; color: var(--accent); background: var(--soft); padding: .6mm 2.4mm; border-radius: 10mm; white-space: nowrap; }
+  .company { font-weight: 600; color: var(--accent2); margin-top: .5mm; }
+  .meta { color: var(--muted); font-size: 8.4pt; }
+  ul.bullets { list-style: none; margin-top: 2mm; }
+  ul.bullets li { position: relative; padding-left: 4mm; margin-bottom: .8mm; }
+  ul.bullets li::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); }
+  ul.bullets b { color: var(--ink); font-weight: 600; }
+
+  .project { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 2mm; padding: 2mm 3mm; margin-bottom: 2mm; }
+  .project:nth-of-type(2) { border-left-color: var(--accent2); }
+  .project:nth-of-type(3) { border-left-color: var(--teal); }
+  .project h3 { font-size: 10pt; color: var(--ink); font-weight: 700; display: flex; justify-content: space-between; gap: 3mm; }
+  .project h3 a { font-size: 7.8pt; font-weight: 500; color: var(--accent); text-decoration: none; }
+  .project p { margin-top: 1mm; }
+  .stack { display: flex; flex-wrap: wrap; gap: 1.2mm; margin-top: 1.6mm; }
+  .stack span { font-size: 7.4pt; font-weight: 600; color: #475569; background: #f1f5f9; padding: .4mm 1.8mm; border-radius: 1mm; }
+
+  .edu { margin-bottom: 1.8mm; }
+  .edu .deg { font-weight: 700; color: var(--ink); }
+
+  /* Right column */
+  .skill-group { margin-bottom: 2.4mm; }
+  .skill-group h4 { font-size: 8pt; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); font-weight: 700; margin-bottom: 1.5mm; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.1mm; }
+  .chip { font-size: 7.6pt; font-weight: 600; padding: .5mm 2.2mm; border-radius: 10mm; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent2)); }
+  .chip.alt { color: var(--accent); background: #fff; border: 1px solid #c7d2fe; }
+  .chip.teal { background: linear-gradient(135deg, #0d9488, #0891b2); }
+
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; margin-bottom: 4mm; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 2mm; padding: 1.6mm; text-align: center; }
+  .stat b { display: block; font-size: 15pt; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+  .stat span { font-size: 7.4pt; color: var(--muted); font-weight: 600; }
+
+  .simple li { margin-bottom: 1.2mm; }
+  .simple b { color: var(--ink); display: block; font-weight: 600; }
+  .simple span { color: var(--muted); font-size: 8.2pt; }
+
+  .lang { display: flex; justify-content: space-between; margin-bottom: 1.6mm; }
+  .lang b { color: var(--ink); font-weight: 600; }
+  .lang span { color: var(--muted); font-size: 8.2pt; }
+
+  footer { text-align: center; font-size: 7.4pt; color: var(--muted); padding: 2.5mm; border-top: 1px solid var(--line); }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="head-row">
+      <div class="avatar">RN</div>
+      <div>
+        <h1>Riyazkhan N</h1>
+        <div class="title">Full Stack Software Developer · 5+ Years</div>
+        <p class="tagline">Product-focused engineer building healthcare SaaS at KanTime. I use a creative approach to turn complex business workflows into fast, reliable web and mobile apps.</p>
+      </div>
+    </div>
+    <div class="contacts">
+      <a href="mailto:riyaz.r1410@gmail.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>riyaz.r1410@gmail.com</a>
+      <a href="tel:+918778327724"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>+91 87783 27724</a>
+      <a href="#"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Bangalore, India</a>
+      <a href="https://www.linkedin.com/in/riyazkhan-n-b9593216b"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-7M11 13a3 3 0 0 1 6 0v4"/></svg>riyazkhan-n-b9593216b</a>
+      <a href="https://github.com/Riyazkhan53"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>github.com/Riyazkhan53</a>
+      <a href="https://x.com/RIYAZK13DB"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20"/></svg>@RIYAZK13DB</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="left">
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">Full Stack Developer with <b>5+ years</b> of experience at a <b>product-based company</b>, building and maintaining features for <b>KanTime</b>, a healthcare SaaS platform used by home health and hospice agencies. Strong in <b>React, Material UI, Node.js, Express and MongoDB</b>, with hands-on SQL and C# exposure. Outside work, I ship cross-platform apps with <b>Capacitor, Electron, Expo and Vue.js</b>, taking products from idea to production.</p>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+        <div class="job-head">
+          <div class="job-title">Software Developer · Full Stack</div>
+          <span class="pill">Aug 2021 – Present</span>
+        </div>
+        <div class="company">Grasko Solutions Pvt Ltd · Product: KanTime</div>
+        <div class="meta">Bangalore, Karnataka · Product-based company · Healthcare domain</div>
+        <ul class="bullets">
+          <li>Build and maintain features for <b>KanTime</b>, a healthcare (medical) SaaS product, across the full stack with <b>React.js, Material UI, Node.js, Express and MongoDB</b>.</li>
+          <li>Develop responsive, reusable UI components with <b>HTML5, CSS3, JavaScript and MUI</b>, keeping screens consistent and accessible across modules.</li>
+          <li>Design and integrate <b>REST APIs</b>; write and optimise <b>SQL</b> queries and MongoDB data models for clinical and operational workflows.</li>
+          <li>Work on <b>C#</b> codebase areas for bug fixes and small enhancements alongside the core JavaScript stack.</li>
+          <li>Own features end to end — requirement analysis, development, debugging, code reviews and production support — in an agile product team.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Personal Projects</h2>
+        <div class="project">
+          <h3>Rahul Catering Service — App <a href="https://app.rahulcateringevents.com/">app.rahulcateringevents.com</a></h3>
+          <p>Full-stack catering management platform covering the whole workflow: quotation creation, product lists, billing and PDF invoice generation. Ships as a web app, an <b>Android app (Capacitor)</b> and a <b>desktop app (Electron)</b>.</p>
+          <div class="stack"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Capacitor</span><span>Electron</span></div>
+        </div>
+        <div class="project">
+          <h3>Rahul Catering — Website <a href="https://www.rahulcateringevents.com/">rahulcateringevents.com</a></h3>
+          <p>Customer-facing website with integrated chat and request-for-quotation flow, connected directly to the catering app backend.</p>
+          <div class="stack"><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Node.js</span></div>
+        </div>
+        <div class="project">
+          <h3>Mobile &amp; Web Side Projects</h3>
+          <p>Cross-platform mobile apps built with <b>Expo (React Native)</b> and <b>Capacitor</b> for Android, plus web apps in <b>Vue.js</b>. Final-year project: blockchain-based Bitcoin transaction system.</p>
+          <div class="stack"><span>Expo</span><span>React Native</span><span>Vue.js</span><span>Capacitor</span><span>Android</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="job-head"><span class="deg">B.E. Computer Science &amp; Engineering</span><span class="pill">2016 – 2020</span></div>
+          <div class="meta">Trichy Engineering College, Trichy · CGPA 8.0 / 10</div>
+        </div>
+        <div class="edu">
+          <div class="job-head"><span class="deg">HSLC (Higher Secondary)</span><span class="pill">2015 – 2016</span></div>
+          <div class="meta">C.F.H.S.S Aruvankadu, The Nilgiris · 79.6%</div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="right">
+      <div class="stat-row">
+        <div class="stat"><b>5+</b><span>Years experience</span></div>
+        <div class="stat"><b>3</b><span>Platforms shipped</span></div>
+      </div>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-group">
+          <h4>Frontend</h4>
+          <div class="chips"><span class="chip">React.js</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Material UI</span><span class="chip">Tailwind CSS</span><span class="chip">Vue.js</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Backend &amp; Data</h4>
+          <div class="chips"><span class="chip teal">Node.js</span><span class="chip teal">Express.js</span><span class="chip teal">MongoDB</span><span class="chip teal">SQL</span><span class="chip teal">REST APIs</span><span class="chip teal">C# (basics)</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Mobile &amp; Desktop</h4>
+          <div class="chips"><span class="chip alt">Capacitor</span><span class="chip alt">Expo</span><span class="chip alt">React Native</span><span class="chip alt">Electron</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <div class="chips"><span class="chip alt">Git &amp; GitHub</span><span class="chip alt">Vite</span><span class="chip alt">Postman</span><span class="chip alt">VS Code</span><span class="chip alt">MS Office</span><span class="chip alt">Ethical Hacking (basics)</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Soft Skills</h2>
+        <div class="chips"><span class="chip alt">Problem Solving</span><span class="chip alt">Teamwork</span><span class="chip alt">Ownership</span><span class="chip alt">Adaptability</span><span class="chip alt">Communication</span></div>
+      </section>
+
+      <section>
+        <h2>Achievements</h2>
+        <ul class="simple" style="list-style:none">
+          <li><b>🏆 Paper Presentation — 1st Place</b><span>Paper on Hybrid Applications</span></li>
+          <li><b>NSS Camp</b><span>Week-long national service camp</span></li>
+                  </ul>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <div class="chips"><span class="chip alt">New tech &amp; VR</span><span class="chip alt">Sudoku &amp; Rubik's Cube</span><span class="chip alt">Console gaming</span><span class="chip alt">Movies</span></div>
+      </section>
+
+      <section style="margin-bottom:0">
+        <h2>Languages</h2>
+        <div class="lang"><b>English</b><span>Professional</span></div>
+        <div class="lang"><b>Tamil</b><span>Native</span></div>
+      </section>
+    </aside>
+  </main>
+</div>
+</body>
+</html>

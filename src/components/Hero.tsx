@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Twitter, Download } from 'lucide-react';
 
 const socials = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/Riyazkhan53', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/riyazkhan-n-b9593216b', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://x.com/RIYAZK13DB', label: 'Twitter' },
 ];
 
 const roles = ['Full Stack Developer', 'React Specialist', 'UI/UX Enthusiast', 'Problem Solver'];
@@ -76,7 +76,8 @@ export default function Hero() {
               View My Work
             </motion.button>
             <motion.a
-              href="#"
+              href={`${import.meta.env.BASE_URL}Riyazkhan_N_Resume.pdf`}
+              download="Riyazkhan_N_Resume.pdf"
               className="px-8 py-3.5 rounded-xl border border-white/10 text-slate-300 font-semibold text-sm hover:bg-white/5 transition-colors flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
