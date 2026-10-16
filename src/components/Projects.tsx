@@ -24,9 +24,19 @@ const projects = [
     github: 'https://github.com/Riyazkhan53/rahul-catering-website',
     demo: 'https://www.rahulcateringevents.com/',
   },
+  {
+    title: 'DiaryByte',
+    desc: 'My personal life-organiser for web and Android, built for daily use. It keeps a mood-tagged diary with a calendar view, saved passwords, banking details with masked numbers, a TMDB-powered movie watchlist, autopay reminders with notifications, expenditure, balance, debt and investment tracking, a to-do list and a private vault. Data syncs to a Node + MongoDB API. Next up: user accounts with login so others can use it too.',
+    tags: ['Expo', 'React Native', 'Node.js', 'Express', 'MongoDB'],
+    gradient: 'from-teal-600 to-cyan-600',
+    stars: 0,
+    featured: true,
+    github: 'https://github.com/Riyazkhan53/DiaryByte',
+    demo: 'https://dairybyte.riyazcreations.in/',
+  },
 ];
 
-const filters = ['All', 'Featured', 'React', 'Node.js'];
+const filters = ['All', 'Featured', 'React', 'Node.js', 'Expo'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
