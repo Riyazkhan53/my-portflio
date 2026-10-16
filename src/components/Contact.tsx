@@ -10,9 +10,9 @@ const contactInfo = [
 ];
 
 const socials = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/Riyazkhan53', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/riyazkhan-n-b9593216b', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://x.com/RIYAZK13DB', label: 'Twitter' },
 ];
 
 export default function Contact() {
